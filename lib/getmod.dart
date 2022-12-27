@@ -30,9 +30,9 @@ void main(List<String> args) {
       Directory('lib/app/modules/$module/bindings').createSync(recursive: true);
     }
 
-    String bindingTemplate = File('templates/binding_template.txt').readAsStringSync();
-    String controllerTemplate = File('templates/controller_template.txt').readAsStringSync();
-    String pageTemplate = File('templates/page_template.txt').readAsStringSync();
+    String bindingTemplate = File('../templates/binding_template.txt').readAsStringSync();
+    String controllerTemplate = File('../templates/controller_template.txt').readAsStringSync();
+    String pageTemplate = File('../templates/page_template.txt').readAsStringSync();
     bindingTemplate = bindingTemplate.replaceAll('[PAGE_NAME]', pageNameCamel);
     controllerTemplate = controllerTemplate.replaceAll('[PAGE_NAME]', pageNameCamel);
     pageTemplate = pageTemplate.replaceAll('[PAGE_NAME]', pageNameCamel);
