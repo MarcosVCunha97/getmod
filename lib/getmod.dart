@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:getmod/templates.dart' as templates;
 
 void main(List<String> args) {
 
@@ -30,9 +31,9 @@ void main(List<String> args) {
       Directory('lib/app/modules/$module/bindings').createSync(recursive: true);
     }
 
-    String bindingTemplate = File('../templates/binding_template.txt').readAsStringSync();
-    String controllerTemplate = File('../templates/controller_template.txt').readAsStringSync();
-    String pageTemplate = File('../templates/page_template.txt').readAsStringSync();
+    String bindingTemplate = templates.bindingTemplate; // File('../templates/binding_template.txt').readAsStringSync();
+    String controllerTemplate = templates.controllerTemplate; //File('../templates/controller_template.txt').readAsStringSync();
+    String pageTemplate = templates.pageTemplate; //File('../templates/page_template.txt').readAsStringSync();
     bindingTemplate = bindingTemplate.replaceAll('[PAGE_NAME]', pageNameCamel);
     controllerTemplate = controllerTemplate.replaceAll('[PAGE_NAME]', pageNameCamel);
     pageTemplate = pageTemplate.replaceAll('[PAGE_NAME]', pageNameCamel);
