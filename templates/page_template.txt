@@ -1,0 +1,20 @@
+
+
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../controllers/[PAGE_NAME_SNAKE]_controller.dart';
+
+class [PAGE_NAME]Page extends GetView<[PAGE_NAME]Controller>{
+
+  const [PAGE_NAME]Page({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('[PAGE_NAME]Page'),
+        centerTitle: true,
+      ),
+    );
+  }
+}
