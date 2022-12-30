@@ -15,7 +15,7 @@ class [PAGE_NAME]Binding implements Bindings {
 const String controllerTemplate = """
 import 'package:get/get.dart';
 
-class [PAGE_NAME]Controller extends GetxController with LoadingMixin {
+class [PAGE_NAME]Controller extends GetxController with FetchDataMixin {
 
   @override
   void onInit(){
